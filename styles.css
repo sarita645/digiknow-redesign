@@ -961,6 +961,19 @@ nav .nav-cta:hover {
   box-shadow: 0 2px 12px rgba(20, 70, 232, 0.06);
 }
 
+/* responsive for cases section */
+@media (max-width: 768px) {
+  .section-cases {
+    padding: 60px 20px;
+  }
+  .cases-featured {
+    grid-template-columns: 1fr;
+  }
+  .cases-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* ──────────────────────────────────────────────────────────────
    SERVICES SECTION
    ────────────────────────────────────────────────────────────── */
