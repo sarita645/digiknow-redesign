@@ -334,6 +334,47 @@ nav .nav-cta:hover {
   background: var(--grad-hero);
 }
 
+/* Banner Swiper background + dark overlay */
+.banner-swiper-wrapper {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.banner-swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.banner-swiper .swiper-slide {
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 100vh; /* ensure full viewport height for hero */
+}
+
+.banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.907); /* 50% black overlay */
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Ensure hero content sits above overlay */
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* style swiper controls to appear above overlay */
+.banner-swiper .swiper-pagination,
+.banner-swiper .swiper-button-prev,
+.banner-swiper .swiper-button-next {
+  z-index: 3;
+}
+
 .b-blob {
   position: absolute;
   border-radius: 50%;
@@ -926,7 +967,7 @@ nav .nav-cta:hover {
 
 .section-services {
   padding: 96px 300px;
-  background: linear-gradient(180deg, #E0EDFF 0%, #C8DCF8 40%, #1446E8 100%);
+  background: linear-gradient(180deg, #E0EDFF 0%, #C8DCF8 40%, #ffffff 100%);
   position: relative;
 }
 
@@ -1183,7 +1224,19 @@ nav .nav-cta:hover {
 }
 
 .ov-em {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  /* placeholder color if icon not yet provided */
   font-size: 26px;
+  line-height: 40px;
+}
+
+.ov-em .ov-icon {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .ov-t {
@@ -1245,6 +1298,36 @@ nav .nav-cta:hover {
   border-radius: 50%;
   background: var(--b1);
   flex-shrink: 0;
+}
+
+/* responsive for services section */
+@media (max-width: 1320px) {
+  .section-services {
+    padding: 60px 20px;
+  }
+  .srv-mode-tabs,
+  .srv-sub-tabs {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    width: auto; /* keep tabs expand to viewport width */
+  }
+  .srv-mode-btn,
+  .srv-sub-btn {
+    width: 100%;
+    justify-content: center;
+  }
+  .srv-grid {
+    grid-template-columns: 1fr;
+  }
+  .srv-split {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .ov-stat {
+    grid-column: span 1;
+  }
 }
 
 /* ──────────────────────────────────────────────────────────────

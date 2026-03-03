@@ -4,7 +4,7 @@
 
 .section-services {
   padding: 96px 300px;
-  background: linear-gradient(180deg, #E0EDFF 0%, #C8DCF8 40%, #1446E8 100%);
+  background: linear-gradient(180deg, #E0EDFF 0%, #C8DCF8 40%, #ffffff 100%);
   position: relative;
 
   // Mode Tabs
@@ -265,7 +265,19 @@
       }
 
       .ov-em {
+        display: inline-block;
+        width: 40px;
+        height: 40px;
+        /* placeholder color if image missing */
         font-size: 26px;
+        line-height: 40px;
+      }
+
+      .ov-em .ov-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
 
       .ov-t {
@@ -336,3 +348,31 @@
     opacity: 1;
   }
 }
+
+// responsive adjustment for smaller screens
+@media (max-width: 1320px) {
+  .section-services {
+    padding: 60px 20px;
+  }
+
+  .srv-mode-tabs,
+  .srv-sub-tabs {
+    flex-direction: column;
+    gap: 8px;
+    align-items: stretch;
+    width: auto; /* ensure full available width, not constrained by parent */
+  }
+
+  .srv-mode-btn,
+  .srv-sub-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .srv-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .srv-split {
+    display: grid;
+    grid-template-columns: 1fr;
