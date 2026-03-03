@@ -1,0 +1,14 @@
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// DigiKnow Project - Main Stylesheet (Root)
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// order of imports defines cascade; keep variables first, helpers last
+// you may add new partials here and rerun sass build
+@import 'partials/variables';
+@import 'partials/reset';
+@import 'partials/typography';
+@import 'partials/navigation';
+@import 'partials/hero';
+@import 'partials/cases';
+@import 'partials/services';
+@import 'partials/helpers';

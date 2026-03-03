@@ -1,0 +1,118 @@
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Variables & CSS Custom Properties
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// Bootstrap imports and customization
+@import '../../node_modules/bootstrap/scss/functions';
+@import '../../node_modules/bootstrap/scss/variables';
+@import '../../node_modules/bootstrap/scss/mixins';
+@import '../../node_modules/bootstrap/scss/root';
+@import '../../node_modules/bootstrap/scss/reboot';
+@import '../../node_modules/bootstrap/scss/containers';
+@import '../../node_modules/bootstrap/scss/grid';
+@import '../../node_modules/bootstrap/scss/buttons';
+@import '../../node_modules/bootstrap/scss/forms';
+
+// Color Scheme
+:root {
+  --l-bg: #EEF4FF;
+  --l-bg2: #E0EDFF;
+  --l-surface: #FFFFFF;
+  --l-border: rgba(99, 155, 255, 0.25);
+  --l-text: #1A2B4A;
+  --l-text2: #4A6A9A;
+  --l-text3: #8AAACF;
+
+  --d-bg: #060F22;
+  --d-bg2: #0A1832;
+  --d-text: #E8F2FF;
+  --d-text2: #7CAAD4;
+
+  --b0: #1446E8;
+  --b1: #2563EB;
+  --b2: #3B82F6;
+  --b3: #60A5FA;
+  --b4: #93C5FD;
+
+  --cyan: #00CFFF;
+
+  // Gradients
+  --grad-btn: linear-gradient(135deg, #1446E8, #3B82F6);
+  --grad-hero: linear-gradient(160deg, #DCEEFF 0%, #EEF4FF 45%, #E4F0FF 100%);
+  --grad-dark: linear-gradient(180deg, #060F22 0%, #0C1A38 50%, #060F22 100%);
+
+  // Typography
+  --font-en: 'Barlow', sans-serif;
+  --font-zh: 'Noto Sans TC', sans-serif;
+
+  // Spacing & Sizing
+  --r: 16px;
+  --max-width: 1320px;
+
+  // Shadows
+  --sh: 0 4px 32px rgba(20, 70, 232, 0.10);
+  --sh-btn: 0 6px 28px rgba(20, 70, 232, 0.35);
+}
+
+// SCSS Variables
+$colors: (
+  'l-bg': #EEF4FF,
+  'l-text': #1A2B4A,
+  'b1': #2563EB,
+  'd-text': #E8F2FF,
+);
+
+$font-family-base: var(--font-zh);
+$font-family-en: var(--font-en);
+
+$breakpoints: (
+  'xs': 320px,
+  'sm': 576px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1320px,
+);
+
+@function breakpoint($name) {
+  @return map-get($breakpoints, $name);
+}
+
+@mixin respond-to($breakpoint) {
+  @media (max-width: breakpoint($breakpoint)) {
+    @content;
+  }
+}
+
+@mixin grid-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 52px;
+
+  @include respond-to('lg') {
+    padding: 0 32px;
+  }
+
+  @include respond-to('md') {
+    padding: 0 20px;
+  }
+}
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin gradient-text {
+  background: var(--grad-btn);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}

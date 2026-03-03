@@ -1,0 +1,104 @@
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+// Typography & Shared Helpers
+// ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+// Headings & Text Scales
+.sec-title {
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 900;
+  line-height: 1.25;
+  margin-bottom: 10px;
+}
+
+.sec-desc {
+  font-size: 15px;
+  line-height: 1.8;
+  color: var(--l-text2);
+  margin-bottom: 48px;
+}
+
+.on-dark {
+  .sec-title {
+    color: var(--d-text);
+  }
+
+  .sec-desc {
+    color: var(--d-text2);
+  }
+
+  .sl-en {
+    color: var(--b3);
+  }
+}
+
+// Gradient Text
+.gt {
+  @include gradient-text;
+}
+
+// Section Labels
+.sl {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+
+  .sl-bar {
+    width: 28px;
+    height: 3px;
+    background: var(--grad-btn);
+    border-radius: 2px;
+  }
+
+  .sl-en {
+    font-family: var(--font-en);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--b1);
+  }
+}
+
+// Button Styles
+.btn-p {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--grad-btn);
+  color: #fff;
+  text-decoration: none;
+  padding: 13px 26px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: var(--sh-btn);
+  transition: all 0.25s;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-zh);
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 36px rgba(20, 70, 232, 0.45);
+  }
+}
+
+.btn-o {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  color: var(--b1);
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  border: 1.5px solid var(--b2);
+  transition: all 0.25s;
+
+  &:hover {
+    background: rgba(37, 99, 235, 0.08);
+  }
+}
