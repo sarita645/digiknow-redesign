@@ -10,6 +10,8 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 <!-- Main Stylesheet (Compiled from SCSS) -->
 <link rel="stylesheet" href="styles.css">
+<!-- Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper@9/swiper-bundle.min.css">
 </head>
 <body>
 
@@ -44,17 +46,19 @@
   <div class="b-blob b-blob-3"></div>
   <div class="b-dots"></div>
 
-  <div class="hero-visual">
-    <div class="sphere-wrap">
-      <div class="sph-ring"></div>
-      <div class="sph-main"></div>
-      <div class="sph-s sph-s1"></div>
-      <div class="sph-s sph-s2"></div>
-      <div class="sph-s sph-s3"></div>
+  <!-- Banner Swiper (replace image paths with your images) -->
+  <div class="banner-swiper-wrapper">
+    <div class="swiper banner-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide" style="background-image:url('image/LDP-Banner_1.jpg')"></div>
+        <div class="swiper-slide" style="background-image:url('image/LDP-Banner_2.jpg')"></div>
+        <div class="swiper-slide" style="background-image:url('image/LDP-Banner_3.jpg')"></div>
+      </div>
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
     </div>
-    <div class="h-card hc1"><div class="hcn">300+</div><div class="hcl">合作品牌</div></div>
-    <div class="h-card hc2"><div class="hcn">10M+</div><div class="hcl">累積觸及</div></div>
-    <div class="h-card hc3"><div class="hcn">B2B</div><div class="hcl">台灣最大商機平台</div></div>
+    <div class="banner-overlay"></div>
   </div>
 
   <div class="hero-content">
@@ -282,15 +286,15 @@
         <div class="ps-right">
           <div class="ps-card">
             <div class="ps-tag">Step 01</div>
-            <div class="ps-title">需求諮詢與目標定義</div>
+            <div class="ps-title">預約填寫</div>
             <p class="ps-desc">預約顧問諮詢，深度了解品牌現況、目標受眾與行銷痛點，共同確認合作方向。</p>
-            <div class="ps-chips"><span class="ps-chip">品牌健檢</span><span class="ps-chip">目標受眾分析</span><span class="ps-chip">競品研究</span></div>
+            <!-- <div class="ps-chips"><span class="ps-chip">品牌健檢</span><span class="ps-chip">目標受眾分析</span><span class="ps-chip">競品研究</span></div> -->
           </div>
         </div>
       </div>
 
       <!-- 02 left -->
-      <div class="proc-step">
+      <!-- <div class="proc-step">
         <div class="ps-left">
           <div class="ps-card">
             <div class="ps-tag">Step 02</div>
@@ -305,10 +309,10 @@
           <div class="ps-line"></div>
         </div>
         <div class="ps-right"></div>
-      </div>
+      </div> -->
 
       <!-- 03 right -->
-      <div class="proc-step">
+      <!-- <div class="proc-step">
         <div class="ps-left"></div>
         <div class="ps-mid">
           <div class="ps-line"></div>
@@ -323,21 +327,21 @@
             <div class="ps-chips"><span class="ps-chip">頻道開設</span><span class="ps-chip">影音製作</span><span class="ps-chip">活動執行</span></div>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <!-- 04 left -->
       <div class="proc-step">
         <div class="ps-left">
           <div class="ps-card">
-            <div class="ps-tag">Step 04</div>
-            <div class="ps-title">數據追蹤與優化</div>
-            <p class="ps-desc">定期提供成效報告，追蹤觸及、互動、轉換等關鍵指標，持續調整策略提升 ROI。</p>
-            <div class="ps-chips"><span class="ps-chip">週報告</span><span class="ps-chip">A/B 測試</span><span class="ps-chip">策略迭代</span></div>
+            <div class="ps-tag">Step 02</div>
+            <div class="ps-title">聯繫拜訪</div>
+            <p class="ps-desc">專人與貴公司聯繫 <br> 約立拜訪時間</p>
+            <!-- <div class="ps-chips"><span class="ps-chip">週報告</span><span class="ps-chip">A/B 測試</span><span class="ps-chip">策略迭代</span></div> -->
           </div>
         </div>
         <div class="ps-mid">
           <div class="ps-line"></div>
-          <div class="ps-circle"><span class="ps-num">04</span><svg width="22" height="22" fill="none" stroke-width="1.5" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
+          <div class="ps-circle"><span class="ps-num">02</span><svg width="22" height="22" fill="none" stroke-width="1.5" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
           <div class="ps-line"></div>
         </div>
         <div class="ps-right"></div>
@@ -348,15 +352,15 @@
         <div class="ps-left"></div>
         <div class="ps-mid">
           <div class="ps-line"></div>
-          <div class="ps-circle final"><span class="ps-num">05</span><svg width="22" height="22" fill="none" stroke-width="1.5" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <div class="ps-circle final"><span class="ps-num">03</span><svg width="22" height="22" fill="none" stroke-width="1.5" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
           <div class="ps-line inv"></div>
         </div>
         <div class="ps-right">
           <div class="ps-card" style="border-color:rgba(0,207,255,.2)">
             <div class="ps-tag" style="color:var(--cyan)">Step 05</div>
-            <div class="ps-title">品牌聲量持續成長</div>
-            <p class="ps-desc">累積內容資產、擴大影響圈、深化受眾信任，讓品牌聲量成為企業最持久的競爭優勢。</p>
-            <div class="ps-chips"><span class="ps-chip">長期經營</span><span class="ps-chip">品牌資產累積</span><span class="ps-chip">商機轉換</span></div>
+            <div class="ps-title">合作提案</div>
+            <p class="ps-desc">提供專業方案組合 <br>執行內容及時程提案 <br>確認報價與簽訂合約</p>
+            <!-- <div class="ps-chips"><span class="ps-chip">長期經營</span><span class="ps-chip">品牌資產累積</span><span class="ps-chip">商機轉換</span></div> -->
           </div>
         </div>
       </div>
@@ -379,7 +383,22 @@
 <div class="footer-note">© 2025 鼎新數智 Digiwin｜就享知 DigiKnow</div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://unpkg.com/swiper@9/swiper-bundle.min.js"></script>
 <script>
+// Initialize banner Swiper
+document.addEventListener('DOMContentLoaded', function(){
+  try{
+    const bannerSwiper = new Swiper('.banner-swiper', {
+      loop: true,
+      effect: 'fade',
+      autoplay: { delay: 5000, disableOnInteraction: false },
+      pagination: { el: '.banner-swiper .swiper-pagination', clickable: true },
+      navigation: { nextEl: '.banner-swiper .swiper-button-next', prevEl: '.banner-swiper .swiper-button-prev' },
+      fadeEffect: { crossFade: true }
+    });
+  }catch(e){console.warn('Swiper init failed', e)}
+});
 document.querySelectorAll('.srv-mode-btn').forEach(btn=>{
   btn.addEventListener('click',()=>{
     document.querySelectorAll('.srv-mode-btn').forEach(b=>b.classList.remove('active'));
