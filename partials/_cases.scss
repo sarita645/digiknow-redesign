@@ -163,9 +163,17 @@
       font-size: 13px;
       color: var(--l-text2);
       line-height: 1.65;
+
+      /* WebKit/Blink multi-line clamp */
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+
+      /* standard hint (experimental) */
+      line-clamp: 3;
+
+      /* fallback for browsers that don’t support -webkit-line-clamp */
+      max-height: calc(1.65em * 3);
       overflow: hidden;
     }
 
